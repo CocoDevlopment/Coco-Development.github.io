@@ -3,204 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coco Development</title>
+<title>CD | Development</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    scroll-behavior:smooth;
     font-family:Arial, Helvetica, sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    background:linear-gradient(180deg,#008cff 0%,#2da8ff 40%,#77ccff 75%,#ffffff 100%);
+    background:linear-gradient(135deg,#071B45,#3A0A55);
+    color:white;
 }
 
-/* ===== Startseite ===== */
+/* Navigation */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:20px;
+    background:rgba(0,0,0,0.25);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
 
-.hero{
-    height:100vh;
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#7bc4ff;
+}
+
+/* Seiten */
+section{
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
+    padding:100px 20px;
 }
 
 .container{
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(12px);
-    padding:60px;
-    border-radius:25px;
-    box-shadow:0 15px 40px rgba(0,0,0,.2);
+    max-width:900px;
 }
 
 h1{
-    color:white;
-    font-size:70px;
+    font-size:60px;
     margin-bottom:20px;
 }
 
-.hero p{
-    color:white;
-    font-size:22px;
-    margin-bottom:40px;
+h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:20px;
+    line-height:1.8;
+    opacity:0.95;
 }
 
 .button{
     display:inline-block;
+    margin-top:35px;
+    padding:15px 35px;
+    background:linear-gradient(90deg,#005cff,#9b3dff);
+    color:white;
     text-decoration:none;
-    background:white;
-    color:#008cff;
-    padding:16px 35px;
-    border-radius:50px;
-    font-weight:bold;
+    border-radius:12px;
     transition:.3s;
 }
 
 .button:hover{
-    transform:scale(1.08);
-    background:#eef8ff;
+    transform:scale(1.05);
 }
 
-/* ===== Über Coco Development ===== */
-
-#about{
-    min-height:100vh;
-    background:white;
-    padding:100px 10%;
+.partner-box{
+    margin-top:35px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    padding:30px;
+    border-radius:15px;
 }
 
-#about h2{
-    font-size:45px;
-    color:#008cff;
-    margin-bottom:20px;
-}
-
-#about p{
-    font-size:20px;
-    color:#555;
-    line-height:1.8;
-    margin-bottom:50px;
-}
-
-.info{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:40px;
-}
-
-.box{
-    background:#f4fbff;
-    border-radius:20px;
-    padding:35px;
-    box-shadow:0 10px 30px rgba(0,0,0,.12);
-    transition:.3s;
-}
-
-.box:hover{
-    transform:translateY(-8px);
-}
-
-.box h3{
-    color:#008cff;
-    margin-bottom:20px;
-    font-size:28px;
-}
-
-.box p{
-    font-size:18px;
-    margin:0;
+footer{
+    margin-top:40px;
+    opacity:.6;
 }
 </style>
 
 </head>
 <body>
 
-<section class="hero">
+<nav>
+    <a href="#home">Start</a>
+    <a href="#partner">Partner</a>
+</nav>
+
+<!-- Seite 1 -->
+<section id="home">
+<div class="container">
+
+<h1>CD | Development</h1>
+
+<p>
+Willkommen bei <strong>CD | Development</strong>.
+
+Wir entwickeln moderne und hochwertige Projekte für Community,
+Server und Unternehmen. Unser Ziel ist es, zuverlässige Lösungen,
+ein professionelles Design und eine angenehme Benutzererfahrung
+miteinander zu verbinden.
+
+<br><br>
+
+Unser Team legt großen Wert auf Qualität, Kreativität und eine enge
+Zusammenarbeit mit unseren Kunden. Jedes Projekt wird individuell
+geplant und mit viel Leidenschaft umgesetzt.
+
+<br><br>
+
+Vielen Dank, dass du unsere Webseite besuchst.
+Wir freuen uns darauf, gemeinsam neue Projekte zu verwirklichen.
+</p>
+
+<a class="button" href="#partner">Unsere Partner</a>
+
+</div>
+</section>
+
+<!-- Seite 2 -->
+<section id="partner">
 
 <div class="container">
 
-<h1>Coco Development</h1>
+<h2>Unsere Partner</h2>
 
-<p>
-Moderne Webseiten • Kreative Ideen • hochwertige Entwicklung
-</p>
+<div class="partner-box">
 
-<a href="#about" class="button">Mehr erfahren</a>
+<h3>Mivora Design</h3>
 
-</div>
-
-</section>
-
-<section id="about">
-
-<div class="info">
-
-<div class="box">
-
-<h3>Was macht Coco Development?</h3>
-
-<p>
-Coco Development entwickelt hochwertige Webseiten mit einem professionellen Design. Dabei liegt der Fokus auf einer schnellen, sicheren und benutzerfreundlichen Umsetzung. Außerdem werden individuelle Lösungen für Leute entwickelt, damit jedes Projekt perfekt ist.
-<br><br>
-✔ Entwicklung moderner Webseiten<br>
-✔ Individuelle Weblösungen<br>
-✔ Responsive Designs für PC und Smartphone<br>
-✔ Kreative und professionelle Gestaltung
+<p style="margin-top:15px;">
+Mivora Design ist unser offizieller Partner im Bereich Design
+und kreative Gestaltung. Gemeinsam arbeiten wir daran,
+professionelle, moderne und einzigartige Projekte zu entwickeln.
+Durch diese Zusammenarbeit können wir unseren Kunden
+hochwertige Designs und kreative Lösungen anbieten.
 </p>
 
 </div>
 
-<div class="box">
-
-<h3>Unser Managment
+<h2 style="margin-top:60px;">Über uns</h2>
 
 <p>
-<b>Coco</b><br>
-Erfinder von Coco Development.
+CD | Development steht für Innovation, Zuverlässigkeit und moderne
+Entwicklung. Unser Fokus liegt darauf, leistungsstarke und optisch
+ansprechende Projekte zu erstellen. Dabei achten wir besonders auf
+Qualität, Performance und eine professionelle Umsetzung.
 
-<b>Cuff</b><br>
-Erfinder von Coco Development.
+Unser Ziel ist es, langfristige Partnerschaften aufzubauen und
+Projekte zu entwickeln, die unsere Kunden begeistern.
 </p>
 
-</div>
-<div class="box"
+<footer>
+© 2026 CD | Development | Made by Coco.
+</footer>
 
-    h3>📄 Informationen</h3>
-
-    <p>
-
-    <strong>⏳ Wie lange dauert ein Projekt?</strong><br>
-    Je nach Zeit dauert die Entwicklung einer Website in der Regel zwischen 6 Tagen und 5 Wochen.
-
-    <br><br>
-
-    <strong>💻 Welche Webseiten werden entwickelt?</strong><br>
-    Von kleinen Landingpages bis hin zu modernen Unternehmenswebseiten (machen wir selten) oder individuellen Projekten.
-
-    <br><br>
-
-    <strong>📱 Sind die Webseiten für Smartphones geeignet?</strong><br>
-    Ja, Jede Website wird entwickelt und funktioniert auf PC und Smartphone.
-
-    <br><br>
-
-    <strong>🎨 Kann das Design angepasst werden?</strong><br>
-    Ja. Farben, Layout, Animationen und Funktionen werden individuell nach Wunsch umgesetzt. Wird aber auch mit der zeit dauern daher wir genau anschauen müssen wie wir es machen 
-
-    <br><br>
-
-    <strong>🚀 Warum Coco Development?</strong><br>
-    Moderne Designs, schnelle Ladezeiten, saubere Programmierung und ein professionelles Auftreten stehen bei jedem Projekt im Mittelpunkt. Erreiche uns nun über discord hier ist der link https://discord.gg/zBEt9Dzqr
-
-    </p>
-
-</div>
 </div>
 
 </section>
